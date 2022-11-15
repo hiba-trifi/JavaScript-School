@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/62ff79fbfd.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./image/JS.png" type="image/x-icon">
+    <title>Exercice javascript pour debutant </title>
+</head>
+
+<body>
+  <div id="navbtn">
+    <i class="fa-solid fa-bars" onclick="navshow() "></i>
+  </div>
+  
+
+  
+  <nav id="navbarmobile">
+  <a  onclick="homepage()">Accueil</a>
+   <a  onclick="showex1()">Les variables</a>
+   <a  onclick="showex2()" >Les conditions </a>
+
+    <div   onmouseover="shownav1()"  onmouseleave="hidenav1()" >
+      <a  id="color1"> Les boucles</a>
+      <div  id="sous1"  >
+      <a  onclick="showex3()">La boucle for</a>
+      <a  onclick="showex4()"  >La boucle while</a>
+      <a  onclick="showex5()" >Les boucles imbriquées</a>
+      </div>
+    </div>
+
+    <a  onclick="showex6()" >Les fonctions</a>
+
+    <div onmouseover="shownav2()"  onmouseleave="hidenav2()" >
+     <a  id="color2">Les chaines</a>
+     <div id="sous2">
+     <a  onclick="showex7()" >Recherche et suppression dans une chaine</a>
+     <a  onclick="showex8()">Compter le nombre de voyelles dans une chaine</a>
+     </div>
+    </div>
+
+    <div  onmouseover="shownav3()" onmouseleave="hidenav3()" >
+     <a  id="color3" >Les tableaux</a>
+      <div id="sous3" >
+      <a  onclick="showex9()" >Tri d'un tableau</a>
+     <a  onclick="showex10()" >Recherche dans un tableau</a>
+     </div>
+    
+    </div>
+
+
+   
+</nav>
+
+
+
+<main>
+
+     <section id="ex1">
+        <h2>Permutation de deux nombres :</h2>
+        <hr>
+        <h3>Enoncé</h3>
+          <p> Ecrire un script qui permute deux nombres saisis dans deux inputs .</p>
+        <h3>Démo</h3>
+        <div class="demo">
+        <form name="form">
+            <input placeholder="text 1" type="text" name="a"/>   <button type="button"  onclick="permuter()" >
+               ←<br>→
+            </button>  <input placeholder="text 2" type="text" name="b"/>
+         </form></div>
+        <h3>Code source</h3> 
+          <img src="./image/EX1.png" alt="">
+
+            
+    </section>
+
+
+
+
+
+
+
+
+    <section id="ex2" >
+        <h2>Valider une date :</h2>
+        <hr>
+        <h3>Enoncé</h3>
+          <p> Ecrire un script qui permet de saisir les trois champs d’une date (jour, mois et année) et d’indiquer si la date est correcte ou non. </p>
+        <h3>Démo</h3>
+        <div class="demo">
+
+         <span>Jour :</span> <br>
+          <input type="number" id="jour"> <br>
+        <span>Mois :</span> <br>
+         <input type="number" id="mois"> <br>
+        <span>Annès :</span> <br>
+        <input type="number" id="annes"> 
+        <button id="validDtae" onclick="checkDate()" > Valider</button>
+        <div id="validation" ></div></div>
+        <h3>Code source</h3>
+        <img src="./image/EX2.png" alt="">
+       
+
+    </section>
+   
+
+
+
+
+
+
+    <section id="ex3">
+        <h2>Table de multiplication :</h2>
+        <hr>
+        <h3>Enoncé</h3>
+         <p> Afficher la table de multiplication d’un nombre saisi par l’utilisateur dans un input.</p>
+        <h3>Démo</h3>
+        <div class="demo">
+        <input type="number" id="number" />
+        <input type="button" value="generate" onclick="multiplication()" />
+        <div id="result"></div></div>
+        <h3>Code source</h3>
+        <img src="./image/EX3.png" alt="">
+    </section>
+
+
+
+
+
+
+
+    <section id="ex4">
+        <h2>Devine le nombre ! </h2>
+        <hr>
+        <h3>Enoncé</h3>
+          <p> L’utilisateur doit deviner un nombre entre 1 et 50 que le programme a choisi aléatoirement en 10 tentatives. Quand l’utilisateur entre une valeur, on lui affiche le nombre de tentatives restantes, ainsi qu’un message indiquant si sa réponse est correcte ou pas.</p>
+        <h3>Démo</h3>
+        <div class="demo">
+        <span>Tentatives : <span id="tentatives">0</span> /10 </span> <br>
+        <input type="number" id="guessnum" placeholder="Entrer un nombre">
+        <input type="button" id="guessBtn" value="Envoyer" onclick="guess()" >
+        <input type="button" id="playagain" value="Play again" onclick="reload()" >
+        <div id="message" ></div>
+        </div>
+        <h3>Code source</h3>
+        <img src="./image/EX4.png" alt="">
+    </section>
+
+
+
+
+
+    <section id="ex5" >
+        <h2>Triangle rectangle en étoiles :</h2>
+        <hr>
+        <h3>Enoncé</h3>
+          <p> Ce programme a pour objectif de dessiner un triangle rectangle en étoiles dont la longueur des diagonales est un nombre saisi par l’utilsateur.</p>
+        <h3>Démo</h3>
+        <div class="demo">
+        <span>Saisir la longueur des diagonales :</span> <br>
+        <input type="number" placeholder="Entrer nombre de diagonal" id="drawInp">
+        <input type="button"  value="Dessiner" onclick="stardraw()">
+        <div id="drawing"></div></div>
+        <h3>Code source</h3>
+        <img src="./image/EX5.png" alt="">
+
+    </section>
+
+
+
+
+
+    <section id="ex6">
+        <h2>Calculatrice :</h2>
+        <hr>
+        <h3>Enoncé</h3>
+          <p> Créez 4 fonctions Javascript (Somme, Soustraction, Division, Multiplication). L’utilisateur saisie deux nombres dans deux inputs, choisi ensuite une opération arithmétique. Le résultat est donné par l’une des 4 fonctions Javascript.</p>
+        <h3>Démo</h3>
+        <div class="demo">
+        <input placeholder="Num 1" id="num1" type="number">
+        <input placeholder="Num 2" id="num2" type="number">
+        <br>
+        <button onclick="plus()">+</button>
+        <button onclick="moin()">-</button>
+        <button onclick="mul()">X</button>
+        <button onclick="dev();">/</button> 
+        <br>
+        <input placeholder="Resultat" type="number" id="answer" ></div>
+        <h3>Code source</h3>
+        <img src="./image/EX6.png" alt="">
+   </section>
+
+
+
+
+    <section id="ex7">
+    <h2>Recherche et suppression dans une chaine :</h2>
+    <hr>
+    <h3>Enoncé</h3>
+      <p> Ecrire un programme Javascript qui demande à l’utilisateur de saisir une phrase dans une zone de texte et un mot dans une autre zone de texte. Le clique sur le bouton rechercher affiche un message si le mot existe dans la phrase ou non. Le clique sur le bouton supprimer permet d’effacer toutes les occurrence du mot dans la phrase ( si le mot existe bien sûr). </p>
+    <h3>Démo</h3>
+    <div class="demo">
+    <span>Saisir une phrase :</span><input type="text"  id="text" > <br> <span>Saisir le mot à rechercher ou à supprimer :</span><input type="text"  id="mot" >  <br>
+    <input type="button"   value="Rechercher" onclick="rechercher()"> <input   type="button"  value="Suprimer" onclick="suprimer()"> 
+    <div id="outputWord"> </div></div> 
+    <h3>Code source</h3>
+    <img src="./image/EX7.png" alt="">
+   </section>
+
+
+
+
+   <section id="ex8">
+     <h2>Compter le nombre de voyelles dans une chaine :</h2>
+     <hr>
+     <h3>Enoncé</h3>
+      <p> Ecrire un programme Javascript qui permet de calculer le nombre de voyelles (a,e,i,o,u,y) dans une phrase saisie par l’utilisateur</p>
+     <h3>Démo</h3>
+     <div class="demo">
+     <span>Saisir une phrase :</span>
+     <input type="text" placeholder="La phrase"  id="strInp"/>
+     <input type="button"   value="Compter le nombre de voyelles" onclick="count()"/>
+     <div id="voyelnum"></div></div>
+     <h3>Code source</h3>
+     <img src="./image/EX8.png" alt="">
+     
+   </section>
+
+
+   <section id="ex9">
+
+    <h2>Tri d’un tableau :</h2>
+    <hr>
+    <h3>Enoncé</h3>
+     <p> Ecrire un programme Javascript qui permet de trier un tableau d’entier (Utiliser n’importe quel algorithme de tri mais surtout pas la fonction Sort de l’objet Array).
+        L’utilisateur commence tout d’abord par saisir la taille du tableau, ensuite il remplit le tableau pour cliquer à la fin sur un bouton trier : celui-ci affichera le tableau en ordre croissant ou décroissant.
+        <h3>Démo</h3>
+        <div class="demo">
+        <span>Donner la taille du tableau :</span> 
+        <input type="number" id="taille"> 
+        <button id="valider"  onclick="tritablecreat()" >Valider</button> <br>
+         <span>Veuiller remplir le tableau :</span>
+          <div id="inputs"></div> <button id="trier"  onclick="tri()" >Trier</button>
+        <div id="sortInputs" ></div>
+        <div  id="sortedarray" ></div>
+      </div>
+        <h3>Code source</h3>
+        <img src="./image/EX9.png" alt="">
+
+   </section>
+
+
+
+   <section id="ex10">
+    <h2> Recherche dans un tableau</h2>
+    <hr>
+    <h3>Enoncé</h3>
+     <p> Ecrire un programme Javascript qui permet de rechercher une valeur dans un tableau d’entier. 
+      L’utilisateur doit suivre les étapes suivantes : <br>
+      1.	Saisir la taille du tableau <br>
+      2.	Remplir le tableau par des entiers <br>
+      3.	Introduire la valeur à rechercher <br>
+      4.	Cliquer sur le boutons « Rechercher » <br>
+      Le programme affiche ensuite un message si la valeur à rechercher existe ou non dans le tableau.
+      <h3>Démo</h3>
+        <div class="demo">
+    <span >Donner la taille du tableau :</span>
+    <input type="number" id="tailleinp">
+    <input type="button" value="Valider" onclick="reverse()"><br>
+    <span>Veuiller remplir le tableau :</span>
+    <div id="output1"></div><br>
+    <span >Donner la valeur à rechercher dans le tableau :</span>
+    <input type="text" id="valeurArechercher">
+    <input type="button" value="Rechercher" onclick="recherchetabl()"><br>
+    <div id="finalout"></div>
+  </div>
+  <h3>Code source</h3>
+  <img src="./image/EX10.png" alt="">
+   </section>
+
+
+
+
+   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+   <div id="home">
+    <h1>Exercice avec code source javascript </h1>
+   <lottie-player  id="animation" src="https://assets7.lottiefiles.com/packages/lf20_yjrdpceb.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+</div>
+
+
+    <script src="script.js"></script>
+</main>
+</body>
+</html>
